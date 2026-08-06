@@ -48,13 +48,13 @@ RENAME TABLE Employees TO NEW_Employees;
 
 > 对数据库表中数据进行增删操作
 
-- INSERT：插入数据
+- **INSERT**：插入数据
 
-- UPDATE：更新数据
+- **UPDATE**：更新数据
 
-- DELETE：删除数据
+- **DELETE**：删除数据
 
-- INSERT ... ON DUPLICATE KEY UPDATE: 存在则更新，不存在则插入
+- **INSERT ... ON DUPLICATE KEY UPDATE**: 存在则更新，不存在则插入
 
 ```SQL
 
@@ -91,7 +91,7 @@ ON DUPLICATE KEY UPDATE
 
 > 用于查询数据库中的数据
 
-- SELECT: 查询数据
+- **SELECT**: 查询数据
 
 ```SQL
 
@@ -111,13 +111,13 @@ SELECT name FROM Employees WHERE id = 1;
 
 > 控制数据库的访问权限和事务处理，保障数据安全
 
-- GRANT：授予权限
+- **GRANT**：授予权限
 
-- REVOKE：撤销权限
+- **REVOKE**：撤销权限
 
-- COMMIT：提交事务
+- **COMMIT**：提交事务
 
-- ROLLBACK：回滚事务
+- **ROLLBACK**：回滚事务
 
 ```SQL
 

@@ -27,9 +27,9 @@ WHERE column_name RLIKE 'pattern'
 ```
 
 > column_name 需要匹配的列名
-
+>
 > pattern 正则表达式模式
-
+>
 > 默认情况下， MySQL正则表达式不区分大小写，若要区分大小写，则使用关键字BINARY
 
 ```

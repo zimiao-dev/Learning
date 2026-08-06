@@ -82,7 +82,7 @@ ON DUPLICATE KEY UPDATE
 ```
 
 > 操作的是实际数据
-
+>
 > 通过WHERE语句可以精确筛选操作范围
 
 ---
@@ -140,5 +140,8 @@ ROLLBACK;
 ```
 
 > 通常为 DBA DataBase Administrator 数据库管理员使用
+>
 > 管理用户权限和事务控制
+>
+> 对数据库安全性至关重要
 

@@ -1,6 +1,6 @@
 ## LIKE 模糊匹配
 
-```
+```SQL
 WHERE column_name LIKE 'pattern'
 ```
 
@@ -18,22 +18,28 @@ pattern 用于模式匹配， 可以包含通配符
 
 ## RLIKE REGEXP 正则表达式匹配
 
-```
+```SQL
 WHERE column_name RLIKE 'pattern'
 ```
 
-```
+```SQL
 WHERE column_name RLIKE 'pattern'
 ```
 
+> RIKE 与 REGEXP 等价，可以替换使用
+>
 > column_name 需要匹配的列名
 >
 > pattern 正则表达式模式
 >
 > 默认情况下， MySQL正则表达式不区分大小写，若要区分大小写，则使用关键字BINARY
 
-```
-WHERE column_name BINARY 'pattern'
+```SQL
+--- 把列转换为二进制，大小写敏感
+WHERE BINARY column_name RLIKE 'pattern'
+
+--- 把正则表达式转换为二进制，大小写敏感
+WHERE column_name RLIKE BINARY 'pattern'
 ```
 
 ---

@@ -44,7 +44,7 @@ conn = pymysql.connect(..., autocommit=True)
 
 - 开启自动提交：每执行一条增删改 SQL，立刻自动 commit，不需要手动写conn.commit()。
 
-> 开发业务项目不建议开启 autocommit，失去事务能力，无法保证一组操作原子性。
+    > 开发业务项目不建议开启 autocommit，失去事务能力，无法保证一组操作原子性。
 
 5. 写数据库代码标准范式：try‑except‑finally，保证出错回滚，资源一定关闭。
 

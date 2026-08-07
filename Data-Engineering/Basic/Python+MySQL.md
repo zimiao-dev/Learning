@@ -200,6 +200,59 @@ if __name__ == "__main__":
 
 ```
 
+运行命令（CMD 终端，带 (venv)）
+
+```cmd
+
+python test_mysql.py
+
+```
+
+运行输出示例
+
+```plaintext
+
+【C‑新增之后全部数据】
+(1, '张三', 20)
+(2, '李四', 22)
+
+【U‑更新张三年龄之后】
+(1, '张三', 21)
+(2, '李四', 22)
+
+【D‑删除李四之后】
+(1, '张三', 21)
+
+```
+
+### 三个 fetch 方法区别（Read 查询时用）
+
+1. fetchone()：拿第一条查询结果
+
+2. fetchall()：拿全部查询结果，返回元组列表，示例中使用这个
+
+3. fetchmany(n)：拿 n 条结果
+
+> 💡重点提醒：
+> 
+> 查询 SELECT，不需要写 commit ()
+> 
+> 插入 INSERT / 更新 UPDATE / 删除 DELETE，必须写 conn.commit ()，不然数据只停留在内存，数据库不会真正变化。
+
+## 重复运行会发生什么？
+
+因为设置了IF NOT EXISTS，库和表不会重复创建；但是每次运行会继续插入张三、李四，会不断新增重复数据。
+
+> 如果想清空表测试，可以在 MySQL Workbench 执行：
+
+```sql
+
+TRUNCATE TABLE python_demo_db.student;
+
+```
+
+清空表里全部数据，方便重新跑 demo。
+
 ---
 
 ## 5. 配置 Git 工程配套文件

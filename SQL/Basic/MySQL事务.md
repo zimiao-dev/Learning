@@ -10,17 +10,17 @@
 
 1. commit()
 
-作用：把内存中的修改，持久化保存到数据库。
+- 作用：把内存中的修改，持久化保存到数据库。
 
-使用场景：INSERT、UPDATE、DELETE执行完成之后。
+- 使用场景：INSERT、UPDATE、DELETE执行完成之后。
 
-查询SELECT不需要 commit。
+- 查询SELECT不需要 commit。
 
 2. rollback()
 
-作用：撤销本次事务所有未提交的改动。
+- 作用：撤销本次事务所有未提交的改动。
 
-使用场景：捕获到异常、业务逻辑失败时回滚。
+- 使用场景：捕获到异常、业务逻辑失败时回滚。
 
 3. 事务生命周期
 
@@ -42,7 +42,7 @@ conn = pymysql.connect(..., autocommit=True)
 ```
 
 
-开启自动提交：每执行一条增删改 SQL，立刻自动 commit，不需要手动写conn.commit()。
+- 开启自动提交：每执行一条增删改 SQL，立刻自动 commit，不需要手动写conn.commit()。
 
 > 开发业务项目不建议开启 autocommit，失去事务能力，无法保证一组操作原子性。
 

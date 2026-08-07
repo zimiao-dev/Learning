@@ -76,6 +76,8 @@ deactivate
 
 ```
 
+---
+
 ## 3. 在虚拟环境安装 PyMySQL
 
 保持(venv)激活状态，安装数据库驱动库
@@ -93,6 +95,8 @@ pip install pymysql
 pip show pymysql
 
 ```
+
+---
 
 ## 4. 编写数据库连接测试代码
 
@@ -196,6 +200,8 @@ if __name__ == "__main__":
 
 ```
 
+---
+
 ## 5. 配置 Git 工程配套文件
 
 ### 5.1 创建 .gitignore 文件
@@ -283,6 +289,8 @@ python_mysql_demo/
 
 ```
 
+---
+
 ## 7. 常用命令速查表
 
 | 操作 | CMD 命令 |
@@ -294,6 +302,8 @@ python_mysql_demo/
 |导出依赖清单 | pip freeze > requirements.txt|
 |复原项目依赖 | pip install -r requirements.txt|
 |运行 python 脚本 | python test_mysql.py|
+
+---
 
 ## 8. 常见坑点说明
 
